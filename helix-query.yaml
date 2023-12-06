@@ -1,7 +1,10 @@
 ---
 version: 1
 indices:
-  default:
+  custom:
+    include:
+     - /**
+    target: /query-index.json
     properties:
       somedata:
         select: head > meta[property="article:somedata"]
