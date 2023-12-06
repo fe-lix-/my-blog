@@ -1,0 +1,9 @@
+---
+version: 1
+indices:
+  default:
+    properties:
+      somedata:
+        select: head > meta[property="article:somedata"]
+        values: |
+          match(attribute(el, 'content'), '([^,]+)')
